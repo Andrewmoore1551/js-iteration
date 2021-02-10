@@ -25,6 +25,7 @@
 
 const yelling = words => {
   // Your code here
+  return words.map(word => word.toUpperCase())
 }
 
 /**
@@ -36,7 +37,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function doubleTrouble(numbers) {
+  return numbers.map(number => number * 2)
+}
 // ...
 
 /*
@@ -47,6 +50,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+function stringyIndexes(strings) {
+  return strings.map((str, index) => `${str} is at index ${index}`)
+}
 
 // ...
 
@@ -57,7 +63,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function onlyTheEvenSurvive(numbers) {
+  return numbers.filter(number => number % 2 == 0)
+}
 // ...
 
 /*
@@ -67,6 +75,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+function onlyTheEvenIndexedSurvive(numbers) {
+  return numbers.filter((number, index) => index % 2 == 0)
+}
 
 // ...
 
@@ -86,6 +97,11 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const bestMoviesOfTheYear = (movies, movieYear) => {
+  return movies
+    .filter(movie => movie.score > 90 && movie.year === movieYear)
+    .map(movie => movie.name)
+}
 
 // ...
 
@@ -97,6 +113,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+function everyoneIsOdd(numbers) {
+  return numbers.every(number => number % 2 !== 0)
+}
 
 // ...
 
@@ -108,7 +127,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function findTheNeedle(strings) {
+  return strings.find(needle => needle.includes('needle'))
+}
 // ...
 
 /*
@@ -119,6 +140,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+function findTheNeedleIndex(strings) {
+  return strings.findIndex(needle => needle.includes('needle'))
+}
 
 // ...
 
@@ -130,9 +154,12 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+function someoneToLove(strings) {
+  return strings.some(characters => characters.length === 4)
+}
 
 // ...
-
+// ADVENTURE MODE
 /*
  * 11)  Define a function objectKeys that accepts an object of
  *      the form below and returns an array of the object key followed
